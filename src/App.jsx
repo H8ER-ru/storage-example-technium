@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, NavLink } from 'react-router-dom'
 import './App.css'
-
-// Import page components
 import HomePage from './pages/HomePage'
 import SessionStoragePage from './pages/SessionStoragePage'
 import LocalStoragePage from './pages/LocalStoragePage'
@@ -12,7 +10,6 @@ import CookiesPage from './pages/CookiesPage'
 function App() {
   const [theme, setTheme] = useState('light')
 
-  // Load theme from localStorage on component mount
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
     if (savedTheme) {
@@ -21,7 +18,7 @@ function App() {
     }
   }, [])
 
-  // Toggle theme function
+
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
