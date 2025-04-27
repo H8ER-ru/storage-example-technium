@@ -5,12 +5,10 @@ function LocalStorage({ theme, toggleTheme }) {
   const [value, setValue] = useState('');
   const [storedItems, setStoredItems] = useState({});
 
-  // Load all localStorage items on component mount
   useEffect(() => {
     refreshStoredItems();
   }, []);
 
-  // Refresh the list of stored items
   const refreshStoredItems = () => {
     const items = {};
     for (let i = 0; i < localStorage.length; i++) {
@@ -20,7 +18,6 @@ function LocalStorage({ theme, toggleTheme }) {
     setStoredItems(items);
   };
 
-  // Add or update an item
   const handleSave = () => {
     if (key.trim() && value.trim()) {
       localStorage.setItem(key, value);
