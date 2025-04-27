@@ -1,0 +1,37 @@
+/* Base styles for accessibility and better rendering */
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for accessibility */
+:focus {
+  outline: 2px solid #4a6baf;
+  outline-offset: 2px;
+}
+
+/* Reset margins */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+}
+
+/* Basic link styling */
+a {
+  color: #4a6baf;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Focus styles for interactive elements */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #4a6baf;
+  outline-offset: 2px;
+}
